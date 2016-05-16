@@ -30,7 +30,7 @@ input[type=button],
 .msg,
 .bd,
 .act,
-.article {
+.art {
     padding: 9px 14px;
     border: 1px solid transparent;
 }
@@ -43,6 +43,6 @@ input[type=button],
     margin-right: 10px;
 }
 
-.mnuStacked .act {
+.mnu--stacked .act {
     padding-right: 19px;
 }
