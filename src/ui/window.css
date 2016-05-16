@@ -1,0 +1,55 @@
+/**
+ * Window:
+ * `.win`
+ *
+ *     @example
+ *     <div class="win">I'm a window!</div>
+ *
+ */
+
+.win {
+    --zIndex-win: var(--zIndex-8);
+    z-index: var(--zIndex-win);
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+}
+
+.win--act {
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    max-width: calc(100% - 20px);
+    max-height: calc(100vh - 20px) !important;
+    transform: translate(-50%, -50%);
+}
+
+.win .bd {
+    overflow: auto;
+}
+
+@media (max-width: 680px) {
+    .win {
+        display: flex;
+        height: calc(100vh - 20px) !important;
+    }
+    .win .bd {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 12;
+    }
+    .win .bd form {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex-grow: 99;
+    }
+    .win .bd form > div:first-child {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex-grow: 99;
+    }
+}

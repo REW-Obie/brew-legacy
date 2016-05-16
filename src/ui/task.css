@@ -1,0 +1,38 @@
+/***
+ * Tasks:
+ * Display individual blocks of tasks with a checkbox.
+ */
+
+/**
+ * Task:
+ * `.task`
+ *
+ *     @example
+ *     <div class="task">
+ *         <input type="checkbox" id="l1" class="tgl"/>
+ *         <label for="l1">
+ *             <svg class="ico">
+ *                 <use xlink:href="/5.0/dist/sprite.min.svg#check" />
+ *             </svg>
+ *         </label>
+ *         <div class="bd">
+ *             <div class="v strong">Send Moving Package</div>
+ *             <div class="v mute">Today</div>
+ *         </div>
+ *     </div>
+ *
+ */
+
+.task {
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.task h4 {
+    margin: 0;
+}
+
+.task .bd {
+    padding: 0;
+    overflow: hidden;
+}

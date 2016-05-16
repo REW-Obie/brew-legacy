@@ -1,0 +1,28 @@
+/***
+ * Overlays:
+ * Block the UI using `<div class="ovr"></div>`
+ *
+ */
+
+.ovr {
+    --zIndex-overlay: var(--zIndex-7);
+    position: fixed;
+    z-index: var(--zIndex-overlay);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.ovr::before {
+    position: fixed;
+    z-index: calc(var(--zIndex-overlay) - 1);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: '';
+    opacity: .9;
+    background: #282e32;
+}

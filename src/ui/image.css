@@ -1,0 +1,128 @@
+/***
+ * Images:
+ * Responsive images & stuff.
+ */
+
+/**
+ * Basic image:
+ * `.img`
+ *
+ *     @example
+ *     <div class="img"><img src="https://c2.staticflickr.com/8/7004/6843888521_a138b6020d_b.jpg" alt="" /></div>
+ *
+ *
+ */
+
+/**
+ * Image sizes:
+ *
+ *     @example
+ *     <div class="img S1"><img src="https://c2.staticflickr.com/8/7004/6843888521_a138b6020d_b.jpg" alt="" /></div>
+ *     <div class="img S2"><img src="https://c2.staticflickr.com/8/7004/6843888521_a138b6020d_b.jpg" alt="" /></div>
+ *     <div class="img S3"><img src="https://c2.staticflickr.com/8/7004/6843888521_a138b6020d_b.jpg" alt="" /></div>
+ *     <div class="img S4"><img src="https://c2.staticflickr.com/8/7004/6843888521_a138b6020d_b.jpg" alt="" /></div>
+ *     <div class="img S5"><img src="https://c2.staticflickr.com/8/7004/6843888521_a138b6020d_b.jpg" alt="" /></div>
+ *     <div class="img S6"><img src="https://c2.staticflickr.com/8/7004/6843888521_a138b6020d_b.jpg" alt="" /></div>
+ *
+ */
+
+/**
+ * Cover image:
+ *
+ *     @example
+ *     <div class="img imgCover h3/4"><img src="https://c2.staticflickr.com/8/7004/6843888521_a138b6020d_b.jpg" alt="" /></div>
+ *     <div class="img imgContain h3/4"><img src="https://c2.staticflickr.com/8/7004/6843888521_a138b6020d_b.jpg" alt="" /></div>
+ *
+ */
+
+/**
+ * Image captions:
+ *
+ *     @example
+ *     <div class="img">
+ *         <img src="https://c2.staticflickr.com/8/7004/6843888521_a138b6020d_b.jpg" alt="" />
+ *         <div class="cpt">Rawr, I'm a bear!</div>
+ *     </div>
+ *
+ */
+img {
+    max-width: 100%;
+}
+
+.img {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    background-position: center center;
+}
+
+.img img {
+    display: block;
+    z-index: 0;
+}
+
+/* Modifiers */
+
+.img--cover {
+    background-size: cover;
+}
+
+.img--cover img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.img--contain {
+    background-size: contain;
+}
+
+.img--contain img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* End Modifiers */
+
+.img.S1 {
+    width: 32px;
+}
+
+.img.S2 {
+    width: 64px;
+}
+
+.img.S3 {
+    width: 128px;
+}
+
+.img.S4 {
+    width: 256px;
+}
+
+.img.S5 {
+    width: 612px;
+}
+
+.img.S6 {
+    width: 100%;
+}
+
+.cpt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    color: #fff;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+}

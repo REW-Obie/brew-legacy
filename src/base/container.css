@@ -1,0 +1,63 @@
+/***
+ * Containers:
+ * Used to define maximum widths for layout & text copy.
+ */
+
+/**
+ * Container:
+ * `.wrp`
+ *
+ *     @example.show-grid
+ *     <div class="wrp">container</div>
+ */
+
+/**
+ * Container sizes:
+ * `.wrp.S1`<br>
+ * `.wrp.S2`<br>
+ * `.wrp.S3`<br>
+ * `.wrp.S4`<br>
+ * `.wrp.S5`<br>
+ * `.wrp.S6`<br>
+ *
+ *     @example.show-grid
+ *     <div class="wrp S1">Extra small</div>
+ *     <div class="wrp S2">Small</div>
+ *     <div class="wrp S3">Medium</div>
+ *     <div class="wrp S4">Large</div>
+ *     <div class="wrp S5">Extra large</div>
+ *     <div class="wrp S6">Full</div>
+ */
+
+.wrp {
+    max-width: 100%;
+    margin: 0 auto;
+    display: inherit;
+    overflow-x: hidden;
+}
+
+.wrp.S1 {
+    width: 480px;
+}
+
+.wrp.S2 {
+    width: 660px;
+}
+
+.wrp.S3 {
+    width: 880px;
+}
+
+.wrp.S4 {
+    width: 1020px;
+}
+
+.wrp.S5 {
+    width: 1440px;
+}
+
+.wrp.S6 {
+    margin: 0 auto;
+    padding: 0;
+    width: auto;
+}

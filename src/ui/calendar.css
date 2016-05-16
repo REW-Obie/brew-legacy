@@ -1,0 +1,230 @@
+/***
+ * Calendars:
+ * Displaying dates & events.
+ */
+
+/**
+ * Calendars:
+ * `.cal`
+ *
+ *     @example
+ *     <table class="cal">
+ *         <thead>
+ *             <tr>
+ *                 <th>Sun</th>
+ *                 <th>Mon</th>
+ *                 <th>Tue</th>
+ *                 <th>Wed</th>
+ *                 <th>Thu</th>
+ *                 <th>Fri</th>
+ *                 <th>Sat</th>
+ *             </tr>
+ *         </thead>
+ *         <tbody>
+ *            <tr>
+ *                <td><a href="#" class="date">2</a></td>
+ *                <td class="date-today">
+ *                    <a href="#" class="date">3</a>
+ *                    <a href="#" class="event swhA">Thing that we do do here</a>
+ *                </td>
+ *                <td>
+ *                    <a href="#" class="date">4</a>
+ *                    <a href="#" class="event swhC">Send Thank-You Cards</a>
+ *                    <a href="#" class="event swhI">Pick up Milk</a>
+ *                </td>
+ *                <td>
+ *                    <a href="#" class="date">5</a>
+ *                    <a href="#" class="event swhD">Thing that we do do here</a>
+ *                    <a href="#" class="event swhG">Showing 2349 Twinkle way</a>
+ *                </td>
+ *                <td>
+ *                    <a href="#" class="date">6</a>
+ *                    <a href="#" class="event swhB">Open House 1-673 Madison</a>
+ *                </td>
+ *                <td>
+ *                    <a href="#" class="date">7</a>
+ *                    <a href="#" class="event swhE">Twinkle</a>
+ *                    <a href="#" class="event swhC">Send Thank-You Cards</a>
+ *                    <a href="#" class="event swhF">Showing 2349 Twinkle way</a>
+ *                    <a href="#" class="event swhI">Pick up Milk</a>
+ *                </td>
+ *                <td><a href="#" class="date">8</a></td>
+ *            </tr>
+ *            <tr>
+ *                <td><a href="#" class="date">9</a></td>
+ *                <td><a href="#" class="date">10</a></td>
+ *                <td>
+ *                    <a href="#" class="date">11</a>
+ *                    <a href="#" class="event swhH"><strong>3:30</strong> Showing 2349 Twinkle way</a>
+ *                </td>
+ *                <td>
+ *                    <a href="#" class="date">12</a>
+ *                    <a href="#" class="event swhG">Showing 2349 Twinkle way</a>
+ *                </td>
+ *                <td><a href="#" class="date">13</a></td>
+ *                <td><a href="#" class="date">14</a></td>
+ *                <td><a href="#" class="date">15</a></td>
+ *            </tr>
+ *            <tr>
+ *                <td><a href="#" class="date">16</a></td>
+ *                <td>
+ *                    <a href="#" class="date">17</a>
+ *                    <a href="#" class="event swhB">Open House 1234 Rack Ln.</a>
+ *                </td>
+ *                <td>
+ *                    <a href="#" class="date">18</a>
+ *                    <a href="#" class="event swhC">Send Thank-You Cards</a>
+ *                    <a href="#" class="event swhI">Pick up Milk</a>
+ *                </td>
+ *                <td><a href="#" class="date">19</a></td>
+ *                <td>
+ *                    <a href="#" class="date">20</a>
+ *                    <a href="#" class="event swhI">Pick up Milk</a>
+ *                </td>
+ *                <td><a href="#" class="date">21</a></td>
+ *                <td><a href="#" class="date">22</a></td>
+ *            </tr>
+ *            <tr>
+ *                <td><a href="#" class="date">23</a></td>
+ *                <td><a href="#" class="date">24</a></td>
+ *                <td><a href="#" class="date">25</a></td>
+ *                <td><a href="#" class="date">26</a></td>
+ *                <td><a href="#" class="date">27</a></td>
+ *                <td><a href="#" class="date">28</a></td>
+ *                <td><a href="#" class="date">29</a></td>
+ *            </tr>
+ *            <tr>
+ *                <td><a href="#" class="date">30</a><a href="#" class="event swhD">Thing that we do do here</a></td>
+ *                <td>&nbsp;</td>
+ *                <td>&nbsp;</td>
+ *                <td>&nbsp;</td>
+ *                <td>&nbsp;</td>
+ *                <td>&nbsp;</td>
+ *                <td>&nbsp;</td>
+ *            </tr>
+ *         </tbody>
+ *     </table>
+ *
+ */
+.cal {
+    width: 100%;
+    text-align: center;
+}
+
+.cal th {
+    text-transform: uppercase;
+    font-size: 10px;
+    height: 10px;
+}
+
+.cal th,
+.cal td {
+    padding: 10px 0;
+}
+
+.cal a {
+    color: inherit;
+    color: #444;
+}
+
+.cal td {
+    border-top: 1px solid #ddd;
+    vertical-align: top;
+    text-align: left;
+    padding: 0;
+    width: 14.285%;
+}
+
+.cal td + td {
+    border-left: 1px solid #ddd;
+}
+
+.cal .date {
+    display: block;
+    text-decoration: inherit;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+th.compact {
+    padding: 0;
+}
+
+.cal .event {
+    padding: 2px 7px;
+    margin: 2px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 2px;
+    color: #444;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.dateToday {
+    background: #f2f2f2;
+}
+
+.fill {
+    position: relative;
+}
+
+.calFull {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    flex-grow: 99;
+}
+
+.calFull thead {
+    display: block;
+    flex-shrink: 0;
+}
+
+.calFull tr {
+    display: flex;
+    padding: 0;
+}
+
+.calFull th {
+    flex: 1;
+    height: auto;
+    width: 14.2857%;
+    display: block;
+}
+
+.calFull tbody {
+    flex-grow: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.calFull td {
+    width: 14.2857%;
+    display: block;
+    overflow: hidden;
+}
+
+.calFull tbody tr {
+    flex: 1;
+    display: flex;
+}
+
+.calFull .date {
+    display: block;
+    text-decoration: inherit;
+    padding: 5px 10px 0;
+    font-size: 12px;
+}

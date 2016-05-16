@@ -1,0 +1,48 @@
+/***
+ * Dividers:
+ * A visual separator.
+ */
+
+/**
+ * Default Divider:
+ * `.div`
+ *
+ *     @example
+ *     <div class="div"></div>
+ *
+ */
+
+/**
+ * Divider Title:
+ *
+ *     @example
+ *     <div class="div">
+ *         <span class="ttl">Separator</span>
+ *     </div>
+ *
+ */
+.div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 75%;
+    color: rgba(0, 0, 0, .5);
+}
+
+.div::after {
+    content: " ";
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    height: 1px;
+    flex: 1;
+}
+
+.div :first-child {
+    padding-left: 0;
+}
+
+.div .ttl {
+    text-transform: uppercase;
+}

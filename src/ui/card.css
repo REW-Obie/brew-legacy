@@ -1,0 +1,175 @@
+/***
+ * Cards:
+ * A convenient way to display content composed of different types of elements.
+ */
+
+/**
+ * Card:
+ * `.crd`
+ *
+ *     @example
+ *     <div class="crd">I am a card.</div>
+ *
+ */
+
+/**
+ * Card Tails:
+ *
+ * |  |  |
+ * |:-----:|:------:|
+ * | `.tail.TL` | Top Left      |
+ * | `.tail.TC` | Top Center    |
+ * | `.tail.TR` | Top Right     |
+ * | `.tail.BL` | Bottom Left   |
+ * | `.tail.BC` | Bottom Center |
+ * | `.tail.BR` | Bottom Right  |
+ * | `.tail.LT` | Left Top      |
+ * | `.tail.LM` | Left Middle   |
+ * | `.tail.LB` | Left Bottom   |
+ * | `.tail.RT` | Right Top     |
+ * | `.tail.RM` | Right Middle  |
+ * | `.tail.RB` | Right Bottom  |
+ *
+ *     @example
+ *     <div class="crd"><div class="tail TL"></div> I have a tail.</div><br />
+ *
+ */
+
+.crd {
+    --zIndex-adjacent: var(--zIndex-2);
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    z-index: var(--zIndex-adjacent);
+    padding: 14px;
+    max-width: calc(100vw - 40px);
+}
+
+.crdInset {
+    box-shadow: inset 0 2px 0 rgba(0, 0, 0, .01);
+    background: rgba(0, 0, 0, .005);
+}
+
+.tail {
+    --zIndex-adjacent: var(--zIndex-2);
+    position: absolute;
+    border: 8px solid transparent;
+}
+
+.tail::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 7px solid transparent;
+    z-index: calc(var(--zIndex-adjacent) - 1);
+}
+
+/* top */
+
+.tail.TL,
+.tail.TC,
+.tail.TR {
+    top: -16px;
+    border-bottom-color: rgba(0, 0, 0, .2);
+}
+
+.tail.TL::after,
+.tail.TC::after,
+.tail.TR::after {
+    border-bottom-color: #fff;
+    top: -6px;
+    left: -7px;
+}
+
+/* bottom */
+
+.tail.BL,
+.tail.BC,
+.tail.BR {
+    bottom: -16px;
+    border-top-color: rgba(0, 0, 0, .2);
+}
+
+.tail.BL::after,
+.tail.BC::after,
+.tail.BR::after {
+    border-top-color: #fff;
+    bottom: -6px;
+    left: -7px;
+}
+
+/* right */
+
+.tail.TR,
+.tail.BR {
+    right: 10px;
+}
+
+/* left */
+
+.tail.TL,
+.tail.BL {
+    left: 10px;
+}
+
+/* center */
+
+.tail.TC,
+.tail.BC {
+    left: 50%;
+    margin-left: -8px;
+}
+
+/* left */
+
+.tail.LT,
+.tail.LM,
+.tail.LB {
+    left: -16px;
+    border-right-color: rgba(0, 0, 0, .2);
+}
+
+.tail.LT::after,
+.tail.LM::after,
+.tail.LB::after {
+    border-right-color: #fff;
+    top: -7px;
+    left: -6px;
+}
+
+.tail.LM {
+    top: 50%;
+    margin-top: -8px;
+}
+
+.tail.LB {
+    bottom: 10px;
+}
+
+/* right */
+
+.tail.RT,
+.tail.RM,
+.tail.RB {
+    right: -16px;
+    border-left-color: rgba(0, 0, 0, .2);
+}
+
+.tail.RT::after,
+.tail.RM::after,
+.tail.RB::after {
+    border-left-color: #fff;
+    top: -7px;
+    right: -6px;
+}
+
+.tail.RM {
+    top: 50%;
+    margin-top: -8px;
+}
+
+.tail.RB {
+    bottom: 10px;
+}

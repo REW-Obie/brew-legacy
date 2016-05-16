@@ -1,0 +1,48 @@
+@import url('button.css');
+@import url('bar.css');
+@import url('card.css');
+@import url('image.css');
+@import url('badge.css');
+@import url('overlay.css');
+@import url('menu.css');
+@import url('window.css');
+@import url('icon.css');
+@import url('divider.css');
+@import url('field.css');
+@import url('tag.css');
+@import url('message.css');
+@import url('title.css');
+@import url('keyvalset.css');
+@import url('article.css');
+@import url('toggle.css');
+@import url('calendar.css');
+@import url('tree.css');
+@import url('loader.css');
+@import url('event.css');
+@import url('note.css');
+@import url('task.css');
+
+/* 5px X 15px padding and border base. */
+button,
+input[type=button],
+.btn,
+.ttl,
+.msg,
+.bd,
+.act,
+.article {
+    padding: 9px 14px;
+    border: 1px solid transparent;
+}
+
+/* inline items */
+.tag,
+.swh,
+.btn,
+.bdg {
+    margin-right: 10px;
+}
+
+.mnuStacked .act {
+    padding-right: 19px;
+}

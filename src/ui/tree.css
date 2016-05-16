@@ -1,0 +1,93 @@
+/***
+ * Trees:
+ * Multi-level lists.
+ */
+
+/**
+ * Tree:
+ * `.tree`
+ *
+ *     @example
+ *     <div class="tree">
+ *         <ul>
+ *             <li>People<ul>
+ *                 <ul>
+ *                     <li>Mike</li>
+ *                     <li>Phil</li>
+ *                 </ul>
+ *             </li>
+ *             <li>Places
+ *                 <ul>
+ *                     <li>Nanaimo</li>
+ *                     <li>Vancover</li>
+ *                 </ul>
+ *             </li>
+ *             <li>Other</li>
+ *         </ul>
+ *     </div>
+ *
+ */
+.tree,
+.tree ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.tree li {
+    position: relative;
+}
+
+.tree li li {
+    margin-left: 17px;
+}
+
+.tree li a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 15px;
+    color: #111;
+    position: relative;
+}
+
+.tree li li a {
+    border-left: 1px solid #999;
+}
+
+.tree li li a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 10px;
+    border-top: 1px solid #999;
+}
+
+li li a + ul::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: -16px;
+    height: 16px;
+    width: 8px;
+    background: #f7f7f7;
+}
+
+.tree li li:last-child::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -4px;
+    bottom: 0;
+    height: 16px;
+    width: 8px;
+    background: #f7f7f7;
+}
+
+.tree a .ico {
+    top: -1px;
+    fill: #999;
+}

@@ -1,0 +1,111 @@
+/***
+* Loader:
+* A visual cue.
+*/
+
+/**
+* Loader:
+* `.ldr`
+*
+*     @example
+*     <div class="ldr"></div>
+*
+*/
+
+/**
+* Loader sizes:
+* `.ldr.S1`<br>
+* `.ldr.S2`<br>
+* `.ldr.S3`<br>
+* `.ldr.S4`<br>
+* `.ldr.S5`
+*
+*     @example
+*     <div class="ldr S1"></div>
+*     <div class="ldr S2"></div>
+*     <div class="ldr S3"></div>
+*     <div class="ldr S4"></div>
+*     <div class="ldr S5"></div>
+*/
+
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.ldr {
+    --zIndex-ldr: var(--zIndex-6);
+    font-size: 10px;
+    z-index: var(--zIndex-ldr);
+    display: inline-block;
+    overflow: hidden;
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+    text-indent: -9999em;
+    border: 1px solid #008dff;
+    border-left: 1px solid transparent;
+}
+
+.ldr,
+.ldr::after {
+    border-radius: 50%;
+}
+
+.thmD .ldr {
+    border-color: #fff #fff #fff transparent;
+}
+
+.ldr.CM {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+}
+
+.ldr.TR {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.ldr.S1 {
+    width: 12px;
+    height: 12px;
+}
+
+.ldr.S2 {
+    width: 18px;
+    height: 18px;
+}
+
+.ldr.S3 {
+    width: 24px;
+    height: 24px;
+}
+
+.ldr.S4 {
+    width: 32px;
+    height: 32px;
+}
+
+.ldr.S5 {
+    width: 48px;
+    height: 48px;
+}

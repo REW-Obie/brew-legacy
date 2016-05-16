@@ -1,0 +1,220 @@
+/***
+ * Buttons:
+ * Things are better with buttons.
+ */
+
+/**
+ * Button:
+ * `.btn`
+ *
+ *     @example
+ *     <button class="btn">Button</button>
+ *     <button class="btn btn--cur">Current</button>
+ *     <button class="btn btn--pos">Positive</button>
+ *     <button class="btn btn--neg">Negative</button>
+ *     <button class="btn btn--strong">Strong</button>
+ *     <button class="btn btn--primary">Primary</button>
+ *     <button class="btn btn--link">Link</button>
+ *     <button class="btn btn--fill">Block</button>
+ *     <button class="btn" disabled>Disabled</button>
+ */
+
+/**
+ * Buttonset:
+ * `.btn-set`
+ *
+ *     @example
+ *     <div class="btn-set">
+ *         <a class="btn">Like</a>
+ *         <a class="btn">Thing</a>
+ *     </div>
+ *
+ */
+
+/**
+ * Compact Buttonset:
+ * `.btn-set`
+ *
+ *     @example
+ *     <div class="btn-set compact">
+ *         <a class="btn">Left</a>
+ *         <a class="btn">Middle</a>
+ *         <a class="btn">Right</a>
+ *     </div>
+ *
+ * Button Sizing:
+ *
+ *     @example
+ *     <button class="btn S1">Button</button>
+ *     <button class="btn S2">Button</button>
+ *     <button class="btn S3">Button</button>
+ *     <button class="btn S4">Button</button>
+ *     <button class="btn S5">Button</button>
+ *
+ */
+
+.btn {
+    font-size: 14px;
+    background: #f7f7f7;
+    color: #444;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    border-radius: 3px;
+}
+
+.btn:last-child {
+    margin-right: 0;
+}
+
+/* Modifiers */
+
+.btn:active,
+.btn--cur {
+    background: #dedede;
+}
+
+.btn--primary {
+    background: #1890fb;
+    border-color: #1890fb;
+    color: #fff;
+}
+
+.btn--primary:active {
+    background: #147bd6;
+    border-color: #147bd6;
+}
+
+.btn--pos {
+    background: #24c55d;
+    border-color: #24c55d;
+    color: #fff;
+}
+
+.btn--pos:active {
+    background: #14b34c;
+    border-color: #14b34c;
+}
+
+.btn--pos svg {
+    fill: #fff;
+}
+
+.btn--neg {
+    background: #f4514c;
+    border-color: #f4514c;
+    color: #fff;
+}
+
+.btn--link {
+    background: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.btn--link:active {
+    background: rgba(0, 0, 0, .1);
+}
+
+.btn--strong {
+    background: #008dff;
+    color: #fff;
+    border-color: transparent;
+    background: linear-gradient(#00a2ff, #0080ff);
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.btn--fill {
+    width: 100%;
+}
+
+/* End Modifiers */
+
+/* States */
+
+.btn:focus {
+    outline: none;
+}
+
+.btn[disabled],
+.btn[disabled]:active {
+    background: transparent none repeat scroll 0 0;
+    border-color: #eee;
+    color: #b8b8b8;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.btn[disabled] .ico,
+.btn.disabled .ico,
+.btn[disabled]:active .ico,
+.btn.disabled:active .ico {
+    fill: #b8b8b8;
+}
+
+/* End States */
+
+/* Groups */
+
+.btn-set {
+    padding: 5px 0;
+}
+
+.compact .btn + .btn {
+    border-left: 1px solid #eee;
+}
+
+.compact {
+    display: flex;
+}
+
+.compact .btn {
+    margin-left: -1px;
+    border-radius: 0;
+}
+
+.compact .btn:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.compact .btn:last-child {
+    border-radius: 0 3px 3px 0;
+}
+
+.compact .btn:only-child {
+    border-radius: 3px;
+}
+
+/* End Groups */
+
+/* Sizing */
+
+.btn.S1 {
+    padding: 2px 6px;
+    align-self: center;
+}
+
+.btn.S2 {
+    padding: 4px 9px;
+    align-self: center;
+}
+
+.btn.S3 {
+    padding: 7px 14px;
+    align-self: center;
+}
+
+.btn.S4 {
+    padding: 10px 20px;
+    align-self: center;
+}
+
+.btn.S5 {
+    padding: 15px 25px;
+    align-self: center;
+}
+
+/* End Sizing */

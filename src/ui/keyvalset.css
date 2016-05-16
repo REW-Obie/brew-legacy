@@ -1,0 +1,79 @@
+/***
+ * Data sets:
+ * For displaying key-value pairs.
+ */
+
+/**
+ * Default:
+ * `.kvs`
+ *
+ *     @example
+ *     <div class="kvs">
+ *         <ul>
+ *             <li class="kv">
+ *                 <strong class="k">Item #1</strong>
+ *                 <span class="v">Value 1</span>
+ *             </li>
+ *             <li class="kv">
+ *                 <strong class="k">Item #2</strong>
+ *                 <span class="v">Value 2</span>
+ *             </li>
+ *             <li class="kv">
+ *                 <strong class="k">Item #3</strong>
+ *                 <span class="v">Value 3</span>
+ *             </li>
+ *         </ul>
+ *     </div>
+ *
+ */
+.kvs {
+    border-radius: 3px;
+    clear: both;
+}
+
+.kvs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.kv {
+    list-style: none;
+    padding: 5px 0;
+    text-decoration: none;
+
+    display: flex;
+    width: 100%;
+}
+
+.kvs .v {
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Modifiers */
+
+.kvs--stacked .kv {
+    display: block;
+}
+
+.kvs--stacked .v {
+    text-align: inherit;
+    display: block;
+}
+
+.kvs--bordered {
+    border: 1px solid #ddd;
+}
+
+.kvs--bordered .k {
+    padding-left: 9px;
+    padding-right: 5px;
+}
+
+.kvs--bordered .v {
+    padding-left: 5px;
+    padding-right: 9px;
+}
+
+/* End Modifiers */

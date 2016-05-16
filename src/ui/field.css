@@ -1,0 +1,350 @@
+/***
+ * Fields:
+ * Optimal form fields.
+ */
+
+/**
+ * Field:
+ * `.fld`
+ *
+ *     @example
+ *     <div class="fld">
+ *         <label>Field Name</label>
+ *         <input />
+ *     </div>
+ *
+ */
+.fld {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* Modifiers */
+
+.fld--cur {
+    border-color: #008dff;
+}
+
+.fld--dis {
+    background: #f9f9f9;
+}
+
+.fld--err {
+    color: #f4514c;
+    fill: #f4514c;
+    box-shadow: none;
+}
+
+/* End Modifiers */
+
+/* State */
+
+.fld--err input,
+.fld--err select,
+.fld--err textarea,
+.fld--err label,
+input:invalid,
+input:invalid + .ico {
+    color: #f4514c;
+    fill: #f4514c;
+    box-shadow: none;
+}
+
+/* End State */
+
+.fld .input,
+.fld .select {
+    display: flex;
+}
+
+.fld .select {
+    flex-grow: 10;
+}
+
+.fld label,
+.fld .label {
+    position: relative;
+    float: right;
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100px;
+    font-size: 14px;
+    padding: 12px 0 10px;
+    opacity: .66;
+    overflow: hidden;
+}
+
+.fld input {
+    /* For this use case:
+     * flex-grow: 1 === flex-grow: 99 &&
+     * width: 100% === flex-grow: 1
+    */
+    border: 0;
+    background: transparent;
+    padding: 10px 15px 10px 0;
+    box-sizing: border-box;
+    flex-grow: 99;
+    width: 100%; /* yo: new default */
+}
+
+.fld select {
+    /* For this use case:
+     * flex-grow: 1 === flex-grow: 99 &&
+     * width: 100% === flex-grow: 1
+    */
+    border: 0;
+    background: transparent;
+    padding: 10px 20px 10px 0;
+    appearance: none;
+    flex-grow: 99;
+    width: 100%; /* yo: new default */
+}
+
+.fld .cols {
+    margin: 0;
+}
+
+[type=checkbox] {
+    width: auto;
+    position: relative;
+    margin: -2px 3px 0 0;
+}
+
+.fld:last-of-type {
+    border-bottom: none;
+}
+
+.fld .col input {
+    margin-bottom: 8px;
+}
+
+.fld--stacked input[type="file"] + label {
+    margin-top: -30px;
+}
+
+.input .ico:last-child {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+
+.fld input:focus,
+.fld textarea:focus,
+.fld select:focus {
+    outline: none;
+}
+
+.fld--stacked label {
+    display: block;
+    width: auto;
+    border-right: none;
+    padding-bottom: 6px;
+}
+
+.fld--stacked .input {
+    flex-direction: column;
+}
+
+.fld textarea {
+    box-sizing: border-box;
+    border: 0;
+    padding: 10px 20px 10px 0;
+    width: 100%;
+    background: transparent;
+    resize: vertical;
+    min-height: 72px;
+}
+
+.tkns {
+    padding: 10px 5px 5px 0;
+    flex-grow: 99;
+    display: flex;
+    max-width: 100%;
+}
+
+.tkn {
+    background: #f7f7f7;
+    padding: 0 5px;
+    margin: 0 5px 0 0;
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 24px;
+    max-width: 100%;
+}
+
+.tkn > span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 12;
+}
+
+.tkn .ico:last-child {
+    top: -1px;
+    flex-shrink: 0;
+    align-self: center;
+    position: relative;
+    top: auto;
+    right: auto;
+}
+
+.tkn .picture {
+    float: left;
+    margin-right: 5px;
+}
+
+.tkns .tkn a {
+    opacity: .66;
+}
+
+.tkns .tkn a:focus {
+    outline: none;
+    opacity: 1;
+}
+
+.tkns .tkn a:focus svg {
+    fill: #1890fb;
+}
+
+.fld .tkns input {
+    flex-grow: 99;
+    padding: 2px 6px;
+}
+
+.fld input[type=file] {
+    position: absolute;
+    top: -9999px;
+}
+
+.fld input[type=file] + label {
+    border: none;
+    white-space: nowrap;
+    color: #008dff;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 200px;
+    margin-left: auto;
+}
+
+.fld--stacked input,
+.fld--stacked select,
+.fld--stacked textarea {
+    width: 100%;
+    padding: 5px 0;
+}
+
+.fld--stacked input[type=file] + label {
+    margin-top: -2em;
+}
+
+.fld--dis label {
+    color: #999;
+}
+
+.fld label select {
+    padding: 0;
+    width: 100%;
+}
+
+.fld .icoS6 {
+    height: 90px;
+    width: 90px;
+    fill: #777;
+    margin: 40px auto;
+}
+
+::-webkit-input-placeholder {
+    color: #838383;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #838383;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #838383;
+}
+
+:-ms-input-placeholder {
+    color: #838383;
+}
+
+label input {
+    width: auto !important;
+}
+
+[type=search]:focus {
+    background: #fff;
+    color: #444;
+}
+
+/* sort this out, bro */
+
+.fld + .fld {
+    border-top: 1px solid #ddd;
+}
+
+.fld + .cols::before {
+    content: " ";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 0;
+    border-top: 1px solid #ddd;
+}
+
+.fld .ldr,
+.fld .ico {
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.fld-img {
+    background: #666;
+    border-radius: 3px;
+    position: relative;
+    display: block;
+}
+
+.fld-img label {
+    color: #fff;
+}
+
+.fld-img .ico {
+    display: block;
+    margin: 0 auto;
+    fill: #999;
+}
+
+.fld-img .C {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fld-img input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: .001;
+    cursor: pointer;
+}
+
+.col.fld {
+    border-top: none;
+}
+
+.fld .ico + .ico {
+    margin-left: 5px;
+}

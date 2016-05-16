@@ -1,0 +1,97 @@
+/***
+ * Tags:
+ */
+
+/**
+ * Tags:
+ * `.tag`
+ *
+ *     @example
+ *     <span class="tag">Tag</span>
+ *     <span class="tag"><span class="swh swhB"></span> Tag</span>
+ *
+ */
+.tags {
+    padding: 0;
+}
+
+.tag {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    margin-right: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: inherit;
+}
+
+.swh {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ddd;
+    background: #e9e9e9;
+}
+
+.swh.a,
+.event.a {
+    border-color: #e3c067;
+    background: #fdd980;
+}
+
+.swh.b,
+.event.b {
+    border-color: #ec9b72;
+    background: #ffb792;
+}
+
+.swh.c,
+.event.c {
+    border-color: #67c5c1;
+    background: #80dfdb;
+}
+
+.swh.d,
+.event.d {
+    border-color: #a9d97e;
+    background: #c3f397;
+}
+
+.swh.e,
+.event.e {
+    border-color: #9089db;
+    background: #b1aaf8;
+}
+
+.swh.f,
+.event.f {
+    border-color: #d984be;
+    background: #f3a2da;
+}
+
+.swh.g,
+.event.g {
+    border-color: #e36769;
+    background: #fd8083;
+}
+
+.swh.h,
+.event.h {
+    border-color: #afafaf;
+    background: #c8c8c8;
+}
+
+.swh.i,
+.event.i {
+    border-color: #67afe3;
+    background: #80c9fd;
+}
+
+.tag .btn {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.tag .btn .ico {
+    top: -2px;
+}

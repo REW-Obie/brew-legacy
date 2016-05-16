@@ -1,0 +1,58 @@
+/***
+ * Messages:
+ * Displaying user feedback.
+ */
+
+/**
+ * Messages:
+ * `.msg`
+ *
+ *     @example
+ *     <div class="msg">Hmmm</div>
+ *     <div class="msg pos">Positive</div>
+ *     <div class="msg neg">Negative</div>
+ *     <div class="msg wrn">Warning</div>
+ *     <div class="msg tip">Tooltip</div>
+ *
+ */
+.msg {
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.msg :last-child {
+    margin-bottom: 0;
+}
+
+/* Modifiers */
+
+.msg--neg {
+    color: #fff;
+    border-color: #f4514c;
+    background: #f4514c;
+    fill: #fff;
+}
+
+.msg--pos {
+    color: #fff;
+    border-color: #24c55d;
+    background: #24c55d;
+    fill: #fff;
+}
+
+.msg--wrn {
+    color: #fff;
+    border-color: #f4c14c;
+    background: #f4c14c;
+    fill: #fff;
+}
+
+.msg--tip {
+    color: #fff;
+    border-color: #24c1c5;
+    background: #24c1c5;
+    fill: #fff;
+}
+
+/* End Modifiers */

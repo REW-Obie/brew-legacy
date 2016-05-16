@@ -1,0 +1,36 @@
+/***
+ * Titles:
+ * For titles.
+ */
+
+/**
+ * Title:
+ * `.ttl`
+ *
+ *     @example
+ *     <div class="ttl">Title Text</div>
+ *     <div class="ttl"><a href="#">Title Link</a></div>
+ *
+ */
+.ttl {
+    overflow: hidden;
+    margin: 0;
+    white-space: nowrap;
+    text-decoration: none;
+    text-transform: none;
+    text-overflow: ellipsis;
+    color: inherit;
+}
+
+.ttl a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.ttl > :first-child {
+    margin-right: 10px;
+}
+
+.ttl .ico {
+    margin-top: -3px;
+}

@@ -1,0 +1,79 @@
+/***
+ * arts:
+ * Used to display what is commonly called "the media object" in BEM circles. This is less stupid.
+ */
+
+/**
+ * art:
+ * `.art`
+ *
+ *     @example
+ *     <div class="art">I'm an art.</div>
+ *
+ */
+.art-set {
+    padding: 15px 0;
+}
+
+.art-set .art {
+    padding-bottom: 20px;
+}
+
+.art {
+    --zIndex-adjacent: var(--zIndex-2);
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    z-index: var(--zIndex-adjacent);
+
+    text-decoration: inherit;
+    color: inherit;
+    transition: background-color .33s;
+}
+
+.art .img {
+    border-radius: 3px;
+    flex: 0 0 auto;
+    margin: 5px 15px 5px 0;
+}
+
+.art-body {
+    flex: 3 3 auto;
+    padding: 0 5px 0 0;
+    text-decoration: inherit;
+    color: inherit;
+    min-width: 0;
+}
+
+.art .v {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.art .btns {
+    padding: 15px 0;
+    float: right;
+}
+
+.art .tgl-wrp {
+    align-self: center;
+}
+
+.art--compact {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.art--current {
+    background: #ebebeb;
+}
+
+.art--nested {
+    font-size: 13px;
+}
+
+.art--nested .btns {
+    right: -5px;
+}

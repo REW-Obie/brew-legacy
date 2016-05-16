@@ -1,0 +1,98 @@
+/***
+ * # Styleguide options
+ *
+ * ### Head
+ *
+ *     meta(name="viewport" content="width=device-width, initial-scale=1")
+ *     link(rel='stylesheet' href='https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.css')
+ *     link(rel='stylesheet' href='dist/brew.css')
+ *     link(rel='stylesheet' href='_docs.css')
+ *     script(src='https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.js')
+ *
+ * ### Body
+ *
+ *     #docs-header.wrap
+ *         h1 BREW Documentation
+ *         p This guide was generated using <a href="https://github.com/styledown/styledown" target="_blank">styledown</a>.
+ *
+ *     #docs-content.pad
+ *         div(sg-content)
+ *
+ */
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300');
+
+/*
+ * Doc styles
+ */
+
+#docs-content { margin: 60px; }
+#docs-content .sg-show-grid .col { background: #eee; margin: 10px; padding: 5px; }
+#docs-content .sg-show-grid .wrp { background: #eee; min-height: 20px; }
+#docs-content table.sg { border: 1px solid #ddd; width: 100%; max-width: 100%; }
+#docs-content table.sg tbody td { border: 1px solid #ddd; padding: 5px; }
+
+#docs-content h3.sg {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#docs-content code.sg {
+    background: rgba(0, 100, 250, 0.1);
+    box-shadow: none;
+    color: #357;
+}
+
+#docs-header {
+    background: #fafafa;
+    border-bottom: solid 1px #eee;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#docs-header h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+    color: #111;
+    font-size: 3.4em;
+    margin-bottom: 20px;
+}
+
+#docs-header p {
+    font-weight: 400;
+    font-size: 1.15em;
+    line-height: 1.7;
+    color: #222;
+}
+
+/*
+ * override heading styles.
+ */
+h2.sg.sg {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 3em;
+    margin-top: 0;
+}
+
+/*
+ * for @example.slim
+ */
+
+.sg-slim .sg-canvas {
+    max-width: 300px;
+}
+
+/*
+ * for @example.wide
+ */
+
+.sg-wide .sg-canvas {
+    max-width: 540px;
+}

@@ -1,0 +1,192 @@
+/***
+ * Typography:
+ *
+ */
+body {
+    font-family: var(--font-family-base);
+    line-height: 1.5;
+    font-size: 100%;
+}
+
+/**
+ * Headings:
+ * `<h1>`<br>
+ * `<h2>`<br>
+ * `<h3>`<br>
+ * `<h4>`<br>
+ * `<h5>`<br>
+ * `<h6>`
+ *
+ *     @example
+ *     h1 h1. Heading
+ *     h2 h2. Heading
+ *     h3 h3. Heading
+ *     h4 h4. Heading
+ *     h5 h5. Heading
+ *     h6 h6. Heading
+ *
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-base);
+    font-weight: normal;
+    line-height: 1.25;
+}
+
+pre,
+code,
+samp {
+    font-family: 'Source Code Pro', Consolas, monospace;
+    font-size: inherit;
+}
+
+pre {
+    overflow-x: scroll;
+}
+
+code {
+    max-width: 100%;
+    overflow: auto;
+}
+
+h1,
+.txtS6 {
+    font-size: 45px;
+    line-height: 1.25;
+    letter-spacing: -1px;
+}
+
+h2,
+.txtS5 {
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+h3,
+.txtS4 {
+    font-size: 20px;
+}
+
+h4,
+.txtS3 {
+    font-size: 16px;
+}
+
+h5,
+.txtS2 {
+    font-size: 14px;
+}
+
+h6,
+.txtS1 {
+    font-size: 12px;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    text-decoration: none;
+}
+
+p,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 20px;
+}
+
+/**
+ * Alignment:
+ * `.txtL`<br>
+ * `.txtC`<br>
+ * `.txtR`
+ *
+ *     @example
+ *     p.txtL left
+ *     p.txtC center
+ *     p.txtR right
+ *
+ */
+.txtC {
+    text-align: center;
+}
+
+.txtL {
+    text-align: left;
+}
+
+.txtR {
+    text-align: right;
+}
+
+/**
+ * Uppercase:
+ * `.txtUpper`
+ *
+ *     @example
+ *     span.txtUpper uppercase text
+ *
+ */
+.txtUpper {
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+/**
+ * Quotes:
+ * `<blockquote>`
+ *
+ *     @example
+ *     blockquote I'm a quote!
+ *
+ */
+q,
+blockquote {
+    margin: 0;
+    padding: 0;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Strong text:
+ * `<strong>`<br>
+ * `.strong`
+ *
+ *     @example
+ *     strong Look at me!
+ *     .strong Hello there!
+ *
+ */
+strong,
+.strong {
+    font-weight: bold;
+}
+
+small {
+    font-size: 75%;
+    opacity: .75;
+}
+
+.help {
+    display: block;
+    margin: 0 0 20px;
+}
+
+.nowrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}

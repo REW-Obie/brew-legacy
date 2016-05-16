@@ -1,0 +1,57 @@
+/***
+ * Events:
+ * Display individual blocks of events in a timeline.
+ */
+
+/**
+ * Event:
+ * `.event` - These styles are not related to `.event` found in ./calender.css or ./tag.css
+ *
+ *     @example
+ *     <div class="timeline">
+ *         <div class="bd">
+ *             <div class="event">
+ *                 <time class="padV" title="Tuesday, September 30th 2014 @ 9:35am">Sep 30</time>
+ *                 <div class="crd pad">
+ *                     <div class="tail LT"></div>
+ *                     <div class="k strong">Interested in more information</div>
+ *                     <div class="v">Is 9908 Jonas Roads still available? Are you able to send me the full fact-sheet?</div>
+ *                 </div>
+ *             </div>
+ *         </div>
+ *     </div>
+ *
+ */
+.event {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.event .crd {
+    -webkit-flex-grow: 10;
+    -ms-flex-positive: 10;
+    flex-grow: 10;
+    position: relative;
+}
+
+.event time {
+    width: 100px;
+    position: relative;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.event time::after {
+    content: " ";
+    display: block;
+    width: 9px;
+    height: 9px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}

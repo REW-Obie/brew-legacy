@@ -1,0 +1,65 @@
+/***
+ * Icons:
+ * Everyone loves a good icon or two.
+ */
+
+/**
+ * Icon:
+ * `.ico`
+ *
+ *     @example
+ *     <svg class="ico"><use xlink:href="icons.svg#heart"></use></svg>
+ *     <svg class="ico"><use xlink:href="icons.svg#menu"></use></svg>
+ *     <svg class="ico"><use xlink:href="icons.svg#plus"></use></svg>
+ *     <svg class="ico"><use xlink:href="icons.svg#cod"></use></svg>
+ *
+ */
+
+/**
+ * Icon sizes:
+ * `.ico.S1`<br>
+ * `.ico.S2`<br>
+ * `.ico.S3`<br>
+ * `.ico.S4`<br>
+ * `.ico.S5`
+ *
+ *     @example
+ *     <svg class="ico S1"><use xlink:href="icons.svg#heart"></use></svg>
+ *     <svg class="ico S2"><use xlink:href="icons.svg#heart"></use></svg>
+ *     <svg class="ico S3"><use xlink:href="icons.svg#heart"></use></svg>
+ *     <svg class="ico S4"><use xlink:href="icons.svg#heart"></use></svg>
+ *     <svg class="ico S5"><use xlink:href="icons.svg#heart"></use></svg>
+ *
+ */
+.ico {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    fill: inherit;
+}
+
+.ico.S1 {
+    width: 8px;
+    height: 8px;
+}
+
+.ico.S2 {
+    width: 16px;
+    height: 16px;
+}
+
+.ico.S3 {
+    width: 24px;
+    height: 24px;
+}
+
+.ico.S4 {
+    width: 32px;
+    height: 32px;
+}
+
+.ico.S5 {
+    width: 48px;
+    height: 48px;
+}

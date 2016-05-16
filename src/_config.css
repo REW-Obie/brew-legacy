@@ -1,0 +1,122 @@
+/***
+ * Configuration:
+ * TODO
+ */
+:root {
+
+    --font-family-base: lato, 'helvetica neue', arial, sans-serif;
+
+    --width-max-container: 1024px;
+    --width-grid-gutter: 20px;
+
+    --font-family-ui: lato, arial;
+    --color-border-ui: #b9b9b9;
+    --border-radius-ui: 3px;
+
+    --font-buttons: 14px lato, arial;
+    --radius-buttons: 3px;
+
+    --zIndex-1: 10;
+    --zIndex-2: 20;
+    --zIndex-3: 30;
+    --zIndex-4: 40;
+    --zIndex-5: 50;
+    --zIndex-6: 60;
+    --zIndex-7: 70;
+    --zIndex-8: 80;
+    --zIndex-9: 90;
+
+}
+
+/**
+ * Media queries:
+ * We use these media queries:
+ *
+ * ```css
+ * // Small devices (less than 680px)
+ * @media (--small-viewport) { ... }
+ *
+ * // Medium devices (681px to 1024px)
+ * @media (--medium-viewport) { ... }
+ *
+ * // Large devices (1025px to 1399px)
+ * @media (--large-viewport) { ... }
+ *
+ * // Extra large devices (1399px and up)
+ * @media (--xlarge-viewport) { ... }
+ *
+ * // Not large devices (less than 1024px)
+ * @media (--not-large-viewport) { ... }
+ * ```
+ *
+ */
+@custom-media --small-viewport (max-width: 680px);
+@custom-media --medium-viewport (min-width: 681px) and (max-width: 1024px);
+@custom-media --large-viewport (min-width: 1025px) and (max-width: 1399px);
+@custom-media --xlarge-viewport (min-width: 1399px);
+@custom-media --not-large-viewport (max-width: 1024px);
+
+/*
+* Z-Index
+* - We use a z-index scale
+* - The default scale is a set of variables numbered from 1 - 9 E.g:
+*
+*    ```css
+*    :root {
+*      --zIndex-1: 10;
+*      --zIndex-2: 20;
+*      --zIndex-3: 30;
+*      --zIndex-4: 40;
+*      --zIndex-5: 50;
+*      --zIndex-6: 60;
+*      --zIndex-7: 70;
+*      --zIndex-8: 80;
+*      --zIndex-9: 90;
+*    }
+*    ```
+*
+* - The numbers (1 - 9) represent different stacking levels E.g `--zIndex-9` is reserved for certain use cases such as a script forcing an element to the top level and shouldn't be required on an element
+* - Variables can be declared based on the default scale E.g
+*
+*    ```css
+*    - App specific:
+*
+*    #app {
+*        --zIndex-sidebar: var(--zIndex-4);
+*        --zIndex-overlay: var(--zIndex-7);
+*        --zIndex-window: var(--zIndex-8);
+*    }
+*
+*    - Component specific:
+*
+*     .component {
+*        --zIndex-icon: var(--zIndex-1);
+*        --zIndex-popover: var(--zIndex-5);
+*        --zIndex-overlay: var(--zIndex-7);
+*    }
+*
+*    Used as a property value:
+*
+*    .component .ovr {
+*
+*        z-index: var(--zIndex-overlay);
+*    }
+*    ```
+* - The variables explicitly define which levels are currently being used
+* - The different levels may consist of:
+*
+*    ```css
+*     :root {
+*      --zIndex-1: 10;    action buttons/icons
+*      --zIndex-2: 20;    adjacent elements
+*      --zIndex-3: 30;    tooltip
+*      --zIndex-4: 40;    sidebar or off-canvas
+*      --zIndex-5: 50;    popover menus
+*      --zIndex-6: 60;    loading bar
+*      --zIndex-7: 70;    overlay/modal block
+*      --zIndex-8: 80;    windows
+*      --zIndex-9: 90;    reserved for "force to top" via script
+*    }
+*    ```
+*    TODO: implement z-index scale
+*/

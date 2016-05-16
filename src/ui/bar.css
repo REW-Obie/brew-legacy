@@ -1,0 +1,47 @@
+/***
+ * Bars:
+ * Titlebars, toolbars, etc..
+ *
+ */
+
+/**
+ * Basic Bar:
+ * `.bar`
+ *
+ *     @example
+ *     <div class="bar">New</div>
+ *
+ */
+
+/**
+ * Title Bar:
+ *
+ *     @example
+ *     <div class="bar">
+ *         <div class="wrp">
+ *             <h3 class="ttl L"><a href="#">Title</a></h3>
+ *             <span class="btns R">
+ *                 <a class="btn btnV" href="#"><svg class="ico"><use xlink:href="icons.svg#pencil"></use></svg></a>
+ *             </span>
+ *         </div>
+ *     </div>
+ *
+ */
+.bar {
+    display: flex;
+    padding: 5px 0;
+    background: #f7f7f7;
+    align-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.bar .wrp {
+    display: flex;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    align-content: space-around;
+    align-items: center;
+}

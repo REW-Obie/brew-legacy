@@ -1,0 +1,128 @@
+/***
+ * Menus:
+ * Navigation, lists and stuff.
+ */
+
+/**
+ * Menu:
+ * `.mnu`
+ *
+ *     @example
+ *     <div class="mnu">
+ *         <ul>
+ *             <li><a href="#">Menu Item #1</a></li>
+ *             <li><a href="#" class="act">Menu Item #2</a></li>
+ *             <li><a href="#">Menu Item #3</a></li>
+ *         </ul>
+ *     </div>
+ *
+ */
+.mnu::after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.mnu {
+    --zIndex-popover: var(--zIndex-5);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    z-index: var(--zIndex-popover);
+}
+
+.mnu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mnu li {
+    list-style: none;
+    float: left;
+}
+
+.act {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    position: relative;
+
+    color: inherit;
+    text-decoration: none;
+    float: left;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.act .ico {
+    margin-top: -2px;
+}
+
+.act:hover {
+    background: rgba(0, 0, 0, .033);
+}
+
+.mnu .cur {
+    font-weight: bold;
+}
+
+.mnu .cur:hover {
+    background: rgba(0, 0, 0, .1);
+}
+
+/* Modifiers */
+
+.mnu--stacked .act,
+.mnu--stacked li {
+    float: none;
+    display: block;
+}
+
+.mnu--stacked {
+    text-align: left;
+}
+
+.mnu--stacked li {
+    white-space: nowrap;
+}
+
+.mnu--tabs {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .33);
+}
+
+.mnu--tabs .act {
+    display: block;
+    position: relative;
+    color: inherit;
+    text-decoration: inherit;
+    border: 1px solid transparent;
+    position: relative;
+    flex: 1;
+    opacity: .6;
+}
+
+.mnu--tabs .cur {
+    opacity: 1;
+}
+
+.mnu--tabs li {
+    flex: 1;
+    overflow: hidden;
+}
+
+.mnu--tabs .ico {
+    display: block;
+    margin: 5px auto;
+}
+
+.mnu--justify {
+    display: flex;
+}
+
+/* End Modifiers */
