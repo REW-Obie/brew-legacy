@@ -61,6 +61,8 @@
     align-self: center;
 }
 
+/* Modifiers */
+
 .art--compact {
     padding-left: 0;
     padding-right: 0;
@@ -77,3 +79,17 @@
 .art--nested .btns {
     right: -5px;
 }
+
+.art-set--bordered .art {
+    border-bottom: 1px solid #ccc;
+}
+
+.art-set--striped .art {
+    border-bottom: 1px dashed #ccc;
+}
+
+.art-set--hover .art:hover {
+    background: #EFF8FF;
+}
+
+/* End Modiifers */
