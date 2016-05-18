@@ -86,7 +86,6 @@
 *      --zIndex-9: 90;    reserved for "force to top" via script
 *    }
 *    ```
-*    TODO: implement z-index scale
 */
 html {
     font-family: sans-serif; /* 1 */
@@ -2107,6 +2106,7 @@ label input {
         -ms-flex-item-align: center;
             align-self: center;
 }
+/* Modifiers */
 .art--compact {
     padding-left: 0;
     padding-right: 0;
@@ -2120,6 +2120,16 @@ label input {
 .art--nested .btns {
     right: -5px;
 }
+.art-set--bordered .art {
+    border-bottom: 1px solid #ccc;
+}
+.art-set--striped .art {
+    border-bottom: 1px dashed #ccc;
+}
+.art-set--hover .art:hover {
+    background: #eff8ff;
+}
+/* End Modiifers */
 /***
  * Toggles:
  * Pretty checkboxes.
@@ -2721,7 +2731,7 @@ input[type=button],
 .msg,
 .bd,
 .act,
-.article {
+.art {
     padding: 9px 14px;
     border: 1px solid transparent;
 }
@@ -2732,7 +2742,7 @@ input[type=button],
 .bdg {
     margin-right: 10px;
 }
-.mnuStacked .act {
+.mnu--stacked .act {
     padding-right: 19px;
 }
 /***
@@ -3389,8 +3399,9 @@ input[type=button],
 }
 /***
  * Modifiers:
- * TODO
+ * Utility classes
  */
+/* Positioning */
 .L {
     float: left;
     margin-right: auto;
@@ -3403,66 +3414,209 @@ input[type=button],
     margin-left: auto;
     margin-right: auto;
 }
+/* Positioning Breakpoints */
+/* Spacing */
 .pad0 {
     padding: 0;
 }
-.pad {
+.pad-sm {
+    padding: 8px;
+}
+.pad-md {
     padding: 15px;
 }
-.padT {
+.pad-lg {
+    padding: 22px;
+}
+.pad-xl {
+    padding: 29px;
+}
+.padT-sm {
+    padding-top: 8px;
+}
+.padT-md {
     padding-top: 15px;
 }
-.padB {
+.padT-lg {
+    padding-top: 22px;
+}
+.padT-xl {
+    padding-top: 29px;
+}
+.padB-sm {
+    padding-bottom: 8px;
+}
+.padB-md {
     padding-bottom: 15px;
 }
-.padR {
+.padB-lg {
+    padding-bottom: 22px;
+}
+.padB-xl {
+    padding-bottom: 29px;
+}
+.padR-sm {
+    padding-right: 8px;
+}
+.padR-md {
     padding-right: 15px;
 }
-.padL {
+.padR-lg {
+    padding-right: 22px;
+}
+.padR-xl {
+    padding-right: 29px;
+}
+.padL-sm {
+    padding-left: 8px;
+}
+.padL-md {
     padding-left: 15px;
 }
-.padH {
+.padL-lg {
+    padding-left: 22px;
+}
+.padL-xl {
+    padding-left: 29px;
+}
+.padH-sm {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.padH-md {
     padding-left: 15px;
     padding-right: 15px;
 }
-.padV {
+.padH-lg {
+    padding-left: 22px;
+    padding-right: 22px;
+}
+.padH-xl {
+    padding-left: 29px;
+    padding-right: 29px;
+}
+.padV-sm {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.padV-md {
     padding-top: 15px;
     padding-bottom: 15px;
+}
+.padV-lg {
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+.padV-xl {
+    padding-top: 29px;
+    padding-bottom: 29px;
 }
 .mar0 {
     margin: 0;
 }
-.mar {
+.mar-sm {
+    margin: 8px;
+}
+.mar-md {
     margin: 20px;
 }
-.marT {
+.mar-lg {
+    margin: 32px;
+}
+.mar-xl {
+    margin: 44px;
+}
+.marT-sm {
+    margin-top: 8px;
+}
+.marT-md {
     margin-top: 20px;
 }
-.marB {
+.marT-lg {
+    margin-top: 32px;
+}
+.marT-xl {
+    margin-top: 44px;
+}
+.marB-sm {
+    margin-bottom: 8px;
+}
+.marB-md {
     margin-bottom: 20px;
 }
-.marR {
+.marB-lg {
+    margin-bottom: 32px;
+}
+.marB-xl {
+    margin-bottom: 44px;
+}
+.marR-sm {
+    margin-right: 8px;
+}
+.marR-md {
     margin-right: 20px;
 }
-.marL {
+.marR-lg {
+    margin-right: 32px;
+}
+.marR-xl {
+    margin-right: 44px;
+}
+.marL-sm {
+    margin-left: 8px;
+}
+.marL-md {
     margin-left: 20px;
 }
-.marH {
+.marL-lg {
+    margin-left: 32px;
+}
+.marL-xl {
+    margin-left: 44px;
+}
+.marH-sm {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.marH-md {
     margin-left: 20px;
     margin-right: 20px;
 }
-.marV {
+.marH-lg {
+    margin-left: 32px;
+    margin-right: 32px;
+}
+.marH-xl {
+    margin-left: 44px;
+    margin-right: 44px;
+}
+.marV-sm {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.marV-md {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.marV-lg {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.marV-xl {
+    margin-top: 44px;
+    margin-bottom: 44px;
+}
+/* Box Shadow */
 .shd {
     box-shadow: 0 1px 2px rgba(0, 0, 0, .33);
 }
+/* clearfix */
 .cf::after {
     content: " ";
     display: block;
     clear: both;
 }
+/* Display */
 .dI {
     display: inline;
 }
@@ -3487,6 +3641,36 @@ input[type=button],
 }
 .mute {
     opacity: 0.6;
+}
+/* Debug:
+*  Debug layout issues by creating an outline around a container and its children
+*     @example
+*     <div class="tree debug">
+*         <ul>
+*             <li>People
+*                 <ul>
+*                     <li>Mike</li>
+*                     <li>Phil</li>
+*                 </ul>
+*             </li>
+*             <li>Places
+*                 <ul>
+*                     <li>Nanaimo</li>
+*                     <li>Vancover</li>
+*                 </ul>
+*             </li>
+*             <li>Other</li>
+*         </ul>
+*     </div>
+*/
+.debug {
+    outline: 1px solid red;
+}
+.debug * {
+    outline: 1px dashed rgb(26, 193, 118);
+}
+.debug * + * {
+    outline: 1px dashed rgb(20, 116, 230);
 }
 /*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
 /* What follows is the result of much research on cross-browser styling.
@@ -4112,6 +4296,14 @@ input[type=button],
     .cols1-sm > .col {
         width: calc(100% - 20px);
     }
+    .L-sm {
+        float: left;
+        margin-right: auto;
+    }
+    .R-sm {
+        float: right;
+        margin-left: auto;
+    }
     .hid-sm {
         display: none !important;
     }
@@ -4686,6 +4878,14 @@ input[type=button],
     }
     .cols1-md > .col {
         width: calc(100% - 20px);
+    }
+    .L-md {
+        float: left;
+        margin-right: auto;
+    }
+    .R-md {
+        float: right;
+        margin-left: auto;
     }
     .hid-md {
         display: none !important;
@@ -5262,6 +5462,14 @@ input[type=button],
     .cols1-lg > .col {
         width: calc(100% - 20px);
     }
+    .L-lg {
+        float: left;
+        margin-right: auto;
+    }
+    .R-lg {
+        float: right;
+        margin-left: auto;
+    }
     .hid-lg {
         display: none !important;
     }
@@ -5593,6 +5801,14 @@ input[type=button],
     }
     .h1vh-xl::before {
         padding-bottom: 100vh;
+    }
+    .L-xl {
+        float: left;
+        margin-right: auto;
+    }
+    .R-xl {
+        float: right;
+        margin-left: auto;
     }
     .hid-xl {
         display: none !important;
