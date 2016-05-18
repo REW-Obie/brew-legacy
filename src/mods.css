@@ -1,7 +1,10 @@
 /***
  * Modifiers:
- * TODO
+ * Utility classes
  */
+
+/* Positioning */
+
 .L {
     float: left;
     margin-right: auto;
@@ -17,83 +20,321 @@
     margin-right: auto;
 }
 
+/* Positioning Breakpoints */
+
+@media (--small-viewport) {
+    .L-sm {
+        float: left;
+        margin-right: auto;
+    }
+
+    .R-sm {
+        float: right;
+        margin-left: auto;
+    }
+}
+
+@media (--medium-viewport) {
+    .L-md {
+        float: left;
+        margin-right: auto;
+    }
+
+    .R-md {
+        float: right;
+        margin-left: auto;
+    }
+}
+
+@media (--large-viewport) {
+    .L-lg {
+        float: left;
+        margin-right: auto;
+    }
+
+    .R-lg {
+        float: right;
+        margin-left: auto;
+    }
+}
+
+@media (--xlarge-viewport) {
+    .L-xl {
+        float: left;
+        margin-right: auto;
+    }
+
+    .R-xl {
+        float: right;
+        margin-left: auto;
+    }
+}
+
+/* Spacing */
+
 .pad0 {
     padding: 0;
 }
 
-.pad {
-    padding: 15px;
+.pad-sm {
+    padding: var(--pad-sm);
 }
 
-.padT {
-    padding-top: 15px;
+.pad-md {
+    padding: var(--pad-md);
 }
 
-.padB {
-    padding-bottom: 15px;
+.pad-lg {
+    padding: var(--pad-lg);
 }
 
-.padR {
-    padding-right: 15px;
+.pad-xl {
+    padding: var(--pad-xl);
 }
 
-.padL {
-    padding-left: 15px;
+.padT-sm {
+    padding-top: var(--pad-sm);
 }
 
-.padH {
-    padding-left: 15px;
-    padding-right: 15px;
+.padT-md {
+    padding-top: var(--pad-md);
 }
 
-.padV {
-    padding-top: 15px;
-    padding-bottom: 15px;
+.padT-lg {
+    padding-top: var(--pad-lg);
+}
+
+.padT-xl {
+    padding-top: var(--pad-xl);
+}
+
+.padB-sm {
+    padding-bottom: var(--pad-sm);
+}
+
+.padB-md {
+    padding-bottom: var(--pad-md);
+}
+
+.padB-lg {
+    padding-bottom: var(--pad-lg);
+}
+
+.padB-xl {
+    padding-bottom: var(--pad-xl);
+}
+
+.padR-sm {
+    padding-right: var(--pad-sm);
+}
+
+.padR-md {
+    padding-right: var(--pad-md);
+}
+
+.padR-lg {
+    padding-right: var(--pad-lg);
+}
+
+.padR-xl {
+    padding-right: var(--pad-xl);
+}
+
+.padL-sm {
+    padding-left: var(--pad-sm);
+}
+
+.padL-md {
+    padding-left: var(--pad-md);
+}
+
+.padL-lg {
+    padding-left: var(--pad-lg);
+}
+
+.padL-xl {
+    padding-left: var(--pad-xl);
+}
+
+.padH-sm {
+    padding-left: var(--pad-sm);
+    padding-right: var(--pad-sm);
+}
+
+.padH-md {
+    padding-left: var(--pad-md);
+    padding-right: var(--pad-md);
+}
+
+.padH-lg {
+    padding-left: var(--pad-lg);
+    padding-right: var(--pad-lg);
+}
+
+.padH-xl {
+    padding-left: var(--pad-xl);
+    padding-right: var(--pad-xl);
+}
+
+.padV-sm {
+    padding-top: var(--pad-sm);
+    padding-bottom: var(--pad-sm);
+}
+
+.padV-md {
+    padding-top: var(--pad-md);
+    padding-bottom: var(--pad-md);
+}
+
+.padV-lg {
+    padding-top: var(--pad-lg);
+    padding-bottom: var(--pad-lg);
+}
+
+.padV-xl {
+    padding-top: var(--pad-xl);
+    padding-bottom: var(--pad-xl);
 }
 
 .mar0 {
     margin: 0;
 }
 
-.mar {
-    margin: 20px;
+.mar-sm {
+    margin: var(--mar-sm);
 }
 
-.marT {
-    margin-top: 20px;
+.mar-md {
+    margin: var(--mar-md);
 }
 
-.marB {
-    margin-bottom: 20px;
+.mar-lg {
+    margin: var(--mar-lg);
 }
 
-.marR {
-    margin-right: 20px;
+.mar-xl {
+    margin: var(--mar-xl);
 }
 
-.marL {
-    margin-left: 20px;
+.marT-sm {
+    margin-top: var(--mar-sm);
 }
 
-.marH {
-    margin-left: 20px;
-    margin-right: 20px;
+.marT-md {
+    margin-top: var(--mar-md);
 }
 
-.marV {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.marT-lg {
+    margin-top: var(--mar-lg);
 }
+
+.marT-xl {
+    margin-top: var(--mar-xl);
+}
+
+.marB-sm {
+    margin-bottom: var(--mar-sm);
+}
+
+.marB-md {
+    margin-bottom: var(--mar-md);
+}
+
+.marB-lg {
+    margin-bottom: var(--mar-lg);
+}
+
+.marB-xl {
+    margin-bottom: var(--mar-xl);
+}
+
+.marR-sm {
+    margin-right: var(--mar-sm);
+}
+
+.marR-md {
+    margin-right: var(--mar-md);
+}
+
+.marR-lg {
+    margin-right: var(--mar-lg);
+}
+
+.marR-xl {
+    margin-right: var(--mar-xl);
+}
+
+.marL-sm {
+    margin-left: var(--mar-sm);
+}
+
+.marL-md {
+    margin-left: var(--mar-md);
+}
+
+.marL-lg {
+    margin-left: var(--mar-lg);
+}
+
+.marL-xl {
+    margin-left: var(--mar-xl);
+}
+
+.marH-sm {
+    margin-left: var(--mar-sm);
+    margin-right: var(--mar-sm);
+}
+
+.marH-md {
+    margin-left: var(--mar-md);
+    margin-right: var(--mar-md);
+}
+
+.marH-lg {
+    margin-left: var(--mar-lg);
+    margin-right: var(--mar-lg);
+}
+
+.marH-xl {
+    margin-left: var(--mar-xl);
+    margin-right: var(--mar-xl);
+}
+
+.marV-sm {
+    margin-top: var(--mar-sm);
+    margin-bottom: var(--mar-sm);
+}
+
+.marV-md {
+    margin-top: var(--mar-md);
+    margin-bottom: var(--mar-md);
+}
+
+.marV-lg {
+    margin-top: var(--mar-lg);
+    margin-bottom: var(--mar-lg);
+}
+
+.marV-xl {
+    margin-top: var(--mar-xl);
+    margin-bottom: var(--mar-xl);
+}
+
+/* Box Shadow */
 
 .shd {
     box-shadow: 0 1px 2px rgba(0, 0, 0, .33);
 }
+
+/* clearfix */
 
 .cf::after {
     content: " ";
     display: block;
     clear: both;
 }
+
+/* Display */
 
 .dI {
     display: inline;
@@ -137,4 +378,38 @@
 
 @media (--xlarge-viewport) {
     .hid-xl { display: none !important; }
+}
+
+/* Debug:
+*  Debug layout issues by creating an outline around a container and its children
+*     @example
+*     <div class="tree debug">
+*         <ul>
+*             <li>People
+*                 <ul>
+*                     <li>Mike</li>
+*                     <li>Phil</li>
+*                 </ul>
+*             </li>
+*             <li>Places
+*                 <ul>
+*                     <li>Nanaimo</li>
+*                     <li>Vancover</li>
+*                 </ul>
+*             </li>
+*             <li>Other</li>
+*         </ul>
+*     </div>
+*/
+
+.debug {
+    outline: 1px solid red;
+}
+
+.debug * {
+    outline: 1px dashed rgb(26, 193, 118);
+}
+
+.debug * + * {
+    outline: 1px dashed rgb(20, 116, 230);
 }
