@@ -26,6 +26,16 @@
     --zIndex-8: 80;
     --zIndex-9: 90;
 
+    --pad-sm: 8px;
+    --pad-md: 15px;
+    --pad-lg: 22px;
+    --pad-xl: 29px;
+
+    --mar-sm: 8px;
+    --mar-md: 20px;
+    --mar-lg: 32px;
+    --mar-xl: 44px;
+
 }
 
 /**
@@ -118,5 +128,4 @@
 *      --zIndex-9: 90;    reserved for "force to top" via script
 *    }
 *    ```
-*    TODO: implement z-index scale
 */
