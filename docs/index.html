@@ -42,6 +42,140 @@
 @media (--not-large-viewport) { ... }
 </pre>
                 </section>
+                <section class="sg-block sg-section--guideline">
+                    <div class="sg-text">
+                        <h3 id="-guideline" class="sg">#### Guideline</h3>
+                        <p class="sg">Z-Index Scale</p>
+                        <ul class="sg">
+                            <li class="sg">We use a z-index scale</li>
+                            <li class="sg">The default scale is a set of variables numbered from 1 - 9 E.g:</li>
+                        </ul>
+                    </div><pre class="sg sg-lang-css sg-code"> Base z-index scale
+
+:root {
+ --zIndex-1: 10;
+ --zIndex-2: 20;
+ --zIndex-3: 30;
+ --zIndex-4: 40;
+ --zIndex-5: 50;
+ --zIndex-6: 60;
+ --zIndex-7: 70;
+ --zIndex-8: 80;
+ --zIndex-9: 90;
+}
+</pre>
+                    <ul class="sg">
+                        <li class="sg">
+                            <p class="sg">The numbers (1 - 9) represent different stacking levels E.g
+                                <code class="sg">--zIndex-9</code>is reserved for certain use cases such as a script forcing an element to the top level and shouldn&apos;t be required on an element</p>
+                        </li>
+                        <li class="sg">
+                            <p class="sg">Variables can be declared based on the default scale E.g</p>
+                        </li>
+                    </ul><pre class="sg sg-lang-css sg-code"> <span class="hljs-tag">App</span> <span class="hljs-tag">specific</span>
+
+<span class="hljs-id">#app</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">--zIndex-base</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--zIndex-<span class="hljs-number">1</span>)</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">--zIndex-overlay</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--zIndex-<span class="hljs-number">4</span>)</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">--zIndex-modal</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--zIndex-<span class="hljs-number">8</span>)</span></span>;
+ <span class="hljs-rule">}</span></span>
+
+ <span class="hljs-tag">Component</span> <span class="hljs-tag">specific</span>
+
+<span class="hljs-class">.component</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">--zIndex-icon</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--zIndex-<span class="hljs-number">2</span>)</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">--zIndex-popover</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--zIndex-<span class="hljs-number">4</span>)</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">--zIndex-overlay</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--zIndex-<span class="hljs-number">7</span>)</span></span>;
+<span class="hljs-rule">}</span></span>
+
+<span class="hljs-comment">/* Used as a property value
+
+.component .ovr {
+
+```css
+ z-index: var(--zIndex-overlay);
+}
+</span></pre>
+                    <ul class="sg">
+                        <li class="sg">
+                            <p class="sg">The variables explicitly define which levels are currently being used ```
+                            </p>
+                        </li>
+                        <li class="sg">
+                            <p class="sg">The different levels may consist of:</p>
+                        </li>
+                    </ul><pre class="sg sg-lang-css sg-code">:root {
+ --zIndex-1: 10;    action buttons/icons
+ --zIndex-2: 20;    adjacent elements
+ --zIndex-3: 30;    tooltip
+ --zIndex-4: 40;    sidebar or off-canvas
+ --zIndex-5: 50;    popover menus
+ --zIndex-6: 60;    loading bar
+ --zIndex-7: 70;    overlay/modal block
+ --zIndex-8: 80;    windows
+ --zIndex-9: 90;    reserved for &quot;force to top&quot; via script
+ }
+</pre>
+                </section>
+                <section class="sg-block sg-section-gotchas">
+                    <h3 id="gotchas" class="sg">Gotchas</h3>
+                    <ul class="sg">
+                        <li class="sg">Look at the z-index values below and notice where the variable is declared: ```css Input .tail { position: absolute; border: 8px solid transparent; }
+                        </li>
+                    </ul>
+                    <p class="sg">.tail::after { --zIndex-adjacent: var(--zIndex-2); content: &quot; &quot;; display: block; position: absolute; border: 7px solid transparent; z-index: calc(var(--zIndex-adjacent) - 1); }
+                    </p>
+                    <p class="sg">Output .tail { position: absolute; border: 8px solid transparent; } .tail::after { content: &quot; &quot;; display: block; position: absolute; border: 7px solid transparent; z-index: undefined; } .tail::after::after { z-index: calc(20 - 1); }
+                    </p><pre class="sg"><code class="sg">VS
+```css
+Input
+.tail {
+   --zIndex-adjacent: var(--zIndex-2);
+   position: absolute;
+   border: 8px solid transparent;
+}
+
+.tail::after {
+   content: &quot; &quot;;
+   display: block;
+   position: absolute;
+   border: 7px solid transparent;
+   z-index: calc(var(--zIndex-adjacent) - 1);
+}
+
+Output
+
+.tail {
+   position: absolute;
+   border: 8px solid transparent;
+}
+
+.tail::after {
+   content: &quot; &quot;;
+   display: block;
+   position: absolute;
+   border: 7px solid transparent;
+   z-index: calc(20 - 1);
+}
+</code></pre>
+                    <ul class="sg">
+                        <li class="sg">
+                            <p class="sg">Based on the code above, when working with psuedo-elements the
+                                <code class="sg">z-index</code>variable should be declared within the
+                                <code class="sg">.class-name</code>block (which acts as the
+                                <code class="sg">:root</code>in this case) and then it can be passed as a value within the psuedo-element block (
+                                <code class="sg">.class-name::after</code>)</p>
+                        </li>
+                        <li class="sg">
+                            <p class="sg">Above we get
+                                <code class="sg">z-index: undefined</code>because the parser checks the root (
+                                <code class="sg">.tail</code>) for the variable and it doesn&apos;t exist, so it returns
+                                <code class="sg">undefined</code>and treats the psuedo block as the root and returns :
+                                <code class="sg">.tail::after::after</code>
+                            </p>
+                        </li>
+                    </ul>
+                </section>
             </section>
 
             <section class="sg-section sg-section-typography">
