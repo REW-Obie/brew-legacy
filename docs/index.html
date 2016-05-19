@@ -50,9 +50,8 @@
                             <li class="sg">We use a z-index scale</li>
                             <li class="sg">The default scale is a set of variables numbered from 1 - 9 E.g:</li>
                         </ul>
-                    </div><pre class="sg sg-lang-css sg-code"> Base z-index scale
-
-:root {
+                        <p class="sg">Base z-index scale:</p>
+                    </div><pre class="sg sg-lang-css sg-code">:root {
  --zIndex-1: 10;
  --zIndex-2: 20;
  --zIndex-3: 30;
@@ -71,31 +70,26 @@
                         </li>
                         <li class="sg">
                             <p class="sg">Variables can be declared based on the default scale E.g</p>
+                            <p class="sg">App specific:</p>
                         </li>
-                    </ul><pre class="sg sg-lang-css sg-code"> <span class="hljs-tag">App</span> <span class="hljs-tag">specific</span>
-
-<span class="hljs-id">#app</span> <span class="hljs-rules">{
+                    </ul><pre class="sg sg-lang-css sg-code"><span class="hljs-id">#app</span> <span class="hljs-rules">{
    <span class="hljs-rule"><span class="hljs-attribute">--zIndex-base</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--zIndex-<span class="hljs-number">1</span>)</span></span>;
    <span class="hljs-rule"><span class="hljs-attribute">--zIndex-overlay</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--zIndex-<span class="hljs-number">4</span>)</span></span>;
    <span class="hljs-rule"><span class="hljs-attribute">--zIndex-modal</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--zIndex-<span class="hljs-number">8</span>)</span></span>;
  <span class="hljs-rule">}</span></span>
-
- <span class="hljs-tag">Component</span> <span class="hljs-tag">specific</span>
-
-<span class="hljs-class">.component</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">--zIndex-icon</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--zIndex-<span class="hljs-number">2</span>)</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">--zIndex-popover</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--zIndex-<span class="hljs-number">4</span>)</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">--zIndex-overlay</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--zIndex-<span class="hljs-number">7</span>)</span></span>;
-<span class="hljs-rule">}</span></span>
-
-<span class="hljs-comment">/* Used as a property value
+</pre>
+                    <p class="sg">Component specific:</p><pre class="sg sg-lang-css sg-code">.component {
+   --zIndex-icon: var(--zIndex-2);
+   --zIndex-popover: var(--zIndex-4);
+   --zIndex-overlay: var(--zIndex-7);
+}
 
 .component .ovr {
 
 ```css
  z-index: var(--zIndex-overlay);
 }
-</span></pre>
+</pre>
                     <ul class="sg">
                         <li class="sg">
                             <p class="sg">The variables explicitly define which levels are currently being used ```
@@ -120,15 +114,22 @@
                 <section class="sg-block sg-section-gotchas">
                     <h3 id="gotchas" class="sg">Gotchas</h3>
                     <ul class="sg">
-                        <li class="sg">Look at the z-index values below and notice where the variable is declared: ```css Input .tail { position: absolute; border: 8px solid transparent; }
+                        <li class="sg">Look at the z-index values below and notice where the variable is declared: ```css Input:
                         </li>
                     </ul>
+                    <p class="sg">.tail { position: absolute; border: 8px solid transparent; }
+                    </p>
                     <p class="sg">.tail::after { --zIndex-adjacent: var(--zIndex-2); content: &quot; &quot;; display: block; position: absolute; border: 7px solid transparent; z-index: calc(var(--zIndex-adjacent) - 1); }
                     </p>
-                    <p class="sg">Output .tail { position: absolute; border: 8px solid transparent; } .tail::after { content: &quot; &quot;; display: block; position: absolute; border: 7px solid transparent; z-index: undefined; } .tail::after::after { z-index: calc(20 - 1); }
-                    </p><pre class="sg"><code class="sg">VS
+                    <p class="sg">Output:</p>
+                    <p class="sg">.tail { position: absolute; border: 8px solid transparent; } .tail::after { content: &quot; &quot;; display: block; position: absolute; border: 7px solid transparent; z-index: undefined; } .tail::after::after { z-index: calc(20 - 1); }
+                    </p><pre class="sg"><code class="sg">
+VS
+
 ```css
-Input
+
+Input:
+
 .tail {
    --zIndex-adjacent: var(--zIndex-2);
    position: absolute;
@@ -143,7 +144,7 @@ Input
    z-index: calc(var(--zIndex-adjacent) - 1);
 }
 
-Output
+Output:
 
 .tail {
    position: absolute;
