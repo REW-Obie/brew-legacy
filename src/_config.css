@@ -72,9 +72,9 @@
  * - We use a z-index scale
  * - The default scale is a set of variables numbered from 1 - 9 E.g:
  *
- * ```css
- *  Base z-index scale
  *
+ * Base z-index scale:
+ * ```css
  * :root {
  *  --zIndex-1: 10;
  *  --zIndex-2: 20;
@@ -92,24 +92,22 @@
  *
  * - Variables can be declared based on the default scale E.g
  *
- * ```css
- *  App specific
+ *  App specific:
  *
+ * ```css
  * #app {
  *    --zIndex-base: var(--zIndex-1);
  *    --zIndex-overlay: var(--zIndex-4);
  *    --zIndex-modal: var(--zIndex-8);
  *  }
- *
- *  Component specific
- *
+ * ```
+ * Component specific:
+ * ```css
  * .component {
  *    --zIndex-icon: var(--zIndex-2);
  *    --zIndex-popover: var(--zIndex-4);
  *    --zIndex-overlay: var(--zIndex-7);
  * }
- *
- * /* Used as a property value
  *
  * .component .ovr {
  *
@@ -136,7 +134,8 @@
  *  ### Gotchas
  *  - Look at the z-index values below and notice where the variable is declared:
  * ```css
- *  Input
+ *  Input:
+ *
  * .tail {
  *    position: absolute;
  *    border: 8px solid transparent;
@@ -151,7 +150,8 @@
  *    z-index: calc(var(--zIndex-adjacent) - 1);
  * }
  *
- * Output
+ * Output:
+ *
  * .tail {
  *    position: absolute;
  *    border: 8px solid transparent;
@@ -167,9 +167,13 @@
  *    z-index: calc(20 - 1);
  * }
  * ```
+ *
  * VS
+ *
  * ```css
- * Input
+ *
+ * Input:
+ *
  * .tail {
  *    --zIndex-adjacent: var(--zIndex-2);
  *    position: absolute;
@@ -184,7 +188,7 @@
  *    z-index: calc(var(--zIndex-adjacent) - 1);
  * }
  *
- * Output
+ * Output:
  *
  * .tail {
  *    position: absolute;
