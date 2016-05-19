@@ -20,7 +20,7 @@
 
 ### Z-Index Scale
 
-Implement [z-index scale](https://goo.gl/w8b6CQ) in brew.css
+Implemented [z-index scale](https://goo.gl/w8b6CQ) in brew.css
 
 - CSS variables implemented using [postcss-css-variables plugin](https://goo.gl/uyNjPB)
 
@@ -30,7 +30,7 @@ Implement [z-index scale](https://goo.gl/w8b6CQ) in brew.css
 
 - Applied to styles that are likely to change
 
-- [Descendant selectors](https://goo.gl/Blkft0) and multiple class selectors are used for styles that are not likely to change E.g Sizing (`.btn.S2`) and Positioning (`.tail.TR`)
+- [Descendant selectors](https://goo.gl/Blkft0) and multiple class selectors are used for styles that are less likely to change E.g Sizing (`.btn.S2`) and Positioning (`.tail.TR`)
 
 - Implemented a standard naming convention that looks similar to CSS syntax (`block-element--modifier`) [where appropriate](https://goo.gl/HjZvuS)
 
