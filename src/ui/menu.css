@@ -26,7 +26,6 @@
 
 .mnu {
     --zIndex-popover: var(--zIndex-5);
-    text-align: center;
     margin: 0;
     padding: 0;
     z-index: var(--zIndex-popover);
@@ -40,7 +39,10 @@
 
 .mnu li {
     list-style: none;
-    float: left;
+}
+
+.mnu-item {
+    white-space: nowrap;
 }
 
 .act {
@@ -51,7 +53,6 @@
 
     color: inherit;
     text-decoration: none;
-    float: left;
     text-overflow: ellipsis;
     cursor: pointer;
 }
@@ -64,54 +65,42 @@
     background: rgba(0, 0, 0, .033);
 }
 
-.mnu .cur {
-    font-weight: bold;
-}
-
-.mnu .cur:hover {
-    background: rgba(0, 0, 0, .1);
-}
-
 /* Modifiers */
 
-.mnu--stacked .act,
-.mnu--stacked li {
-    float: none;
-    display: block;
+.mnu--inline {
+    display: flex;
 }
 
 .mnu--stacked {
-    text-align: left;
-}
-
-.mnu--stacked li {
-    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
 }
 
 .mnu--tabs {
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center;
+    text-align: center;
     box-shadow: 0 0 3px rgba(0, 0, 0, .33);
 }
 
 .mnu--tabs .act {
-    display: block;
     position: relative;
     color: inherit;
     text-decoration: inherit;
     border: 1px solid transparent;
     position: relative;
     flex: 1;
+    flex-direction: column;
+    justify-content: center;
     opacity: .6;
 }
 
-.mnu--tabs .cur {
+.mnu--tabs .mnu-item--cur {
     opacity: 1;
 }
 
-.mnu--tabs li {
+.mnu--tabs .mnu-item {
     flex: 1;
     overflow: hidden;
 }
@@ -123,6 +112,14 @@
 
 .mnu--justify {
     display: flex;
+}
+
+.mnu-item--cur {
+    font-weight: bold;
+}
+
+.mnu-item--cur:hover {
+    background: rgba(0, 0, 0, .1);
 }
 
 /* End Modifiers */
