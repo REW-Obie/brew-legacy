@@ -11,10 +11,6 @@
  *     <div class="art">I'm an art.</div>
  *
  */
-.art-set {
-    padding: 15px 0;
-}
-
 .art-set .art {
     padding-bottom: 20px;
 }
