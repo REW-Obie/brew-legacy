@@ -102,3 +102,17 @@ Implemented [z-index scale](https://goo.gl/w8b6CQ) in brew.css
     margin-left: var(--mar-xl);
 }
 ```
+
+#### CHANGED FILES:
+
+- root: _config.css, brew.css, mods.css
+
+- src/base: _base.css, normalize.css
+
+- src/ui: _ui.css, article.css, button.css, card.css, field.css, image.css, keyvalset.css, loader.css, menu.css, message.css, toggle.css
+
+#### INCLUDED FILES:
+
+- root: CHANGELOG.md (this file)
+
+- src/base: print.css
