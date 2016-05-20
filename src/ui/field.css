@@ -77,29 +77,19 @@ input:invalid + .ico {
 }
 
 .fld input {
-    /* For this use case:
-     * flex-grow: 1 === flex-grow: 99 &&
-     * width: 100% === flex-grow: 1
-    */
     border: 0;
     background: transparent;
     padding: 10px 15px 10px 0;
     box-sizing: border-box;
-    flex-grow: 99;
-    width: 100%; /* yo: new default */
+    width: 100%; 
 }
 
 .fld select {
-    /* For this use case:
-     * flex-grow: 1 === flex-grow: 99 &&
-     * width: 100% === flex-grow: 1
-    */
     border: 0;
     background: transparent;
     padding: 10px 20px 10px 0;
     appearance: none;
-    flex-grow: 99;
-    width: 100%; /* yo: new default */
+    width: 100%;
 }
 
 .fld .cols {
