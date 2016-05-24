@@ -1406,6 +1406,20 @@ img {
         -ms-flex: 1;
             flex: 1;
     overflow: hidden;
+
+    /* Align .mnu-items without icon */
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .mnu--tabs .ico {
     display: block;
@@ -2199,11 +2213,11 @@ label input {
 .art--nested .btns {
     right: -5px;
 }
-.art-set--bordered .art {
-    border-bottom: 1px solid #ccc;
+.art-set--bordered .art:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
-.art-set--striped .art {
-    border-bottom: 1px dashed #ccc;
+.art-set--striped .art:not(:last-child) {
+    border-bottom: 1px dashed rgba(0, 0, 0, .1);
 }
 .art-set--hover .art:hover {
     background: #eff8ff;

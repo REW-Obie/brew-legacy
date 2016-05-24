@@ -1406,6 +1406,20 @@ img {
         -ms-flex: 1;
             flex: 1;
     overflow: hidden;
+
+    /* Align .mnu-items without icon */
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .mnu--tabs .ico {
     display: block;
