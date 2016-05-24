@@ -55,4 +55,11 @@
     fill: #fff;
 }
 
+.msg--note {
+    color: #fff;
+    background-color: #fff8d4;
+    fill: #fff;
+    border-radius: 3px;
+}
+
 /* End Modifiers */
