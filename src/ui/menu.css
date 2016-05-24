@@ -103,6 +103,12 @@
 .mnu--tabs .mnu-item {
     flex: 1;
     overflow: hidden;
+
+    /* Align .mnu-items without icon */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mnu--tabs .ico {
