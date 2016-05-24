@@ -1021,7 +1021,6 @@ small {
     border: 1px solid #ddd;
     box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
     position: relative;
-    background: #fff;
     border-radius: 3px;
     z-index: 20;
     padding: 14px;
@@ -1648,34 +1647,20 @@ input:invalid + .ico {
     overflow: hidden;
 }
 .fld input {
-    /* For this use case:
-     * flex-grow: 1 === flex-grow: 99 &&
-     * width: 100% === flex-grow: 1
-    */
     border: 0;
     background: transparent;
     padding: 10px 15px 10px 0;
     box-sizing: border-box;
-    -webkit-flex-grow: 99;
-        -ms-flex-positive: 99;
-            flex-grow: 99;
-    width: 100%; /* yo: new default */
+    width: 100%; 
 }
 .fld select {
-    /* For this use case:
-     * flex-grow: 1 === flex-grow: 99 &&
-     * width: 100% === flex-grow: 1
-    */
     border: 0;
     background: transparent;
     padding: 10px 20px 10px 0;
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
-    -webkit-flex-grow: 99;
-        -ms-flex-positive: 99;
-            flex-grow: 99;
-    width: 100%; /* yo: new default */
+    width: 100%;
 }
 .fld .cols {
     margin: 0;
@@ -2033,6 +2018,12 @@ label input {
     border-color: #24c1c5;
     background: #24c1c5;
     fill: #fff;
+}
+.msg--note {
+    color: #fff;
+    background-color: #fff8d4;
+    fill: #fff;
+    border-radius: 3px;
 }
 /* End Modifiers */
 /***
