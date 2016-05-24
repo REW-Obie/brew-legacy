@@ -56,7 +56,7 @@
 }
 
 .msg--note {
-    color: #fff;
+    color: inherit;
     background-color: #fff8d4;
     fill: #fff;
     border-radius: 3px;
