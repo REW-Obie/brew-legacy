@@ -134,7 +134,13 @@ gulp.task('build', ['clean'], () => {
     // Save minified stylesheet
     const minify = source.pipe(clone())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(cssnano({ autoprefixer: false }))
+        .pipe(cssnano({
+            autoprefixer: false,
+            zindex: false,
+            discardComments: {
+                removeAll: true
+            }
+        }))
         .pipe(size({ title: 'Minify' }))
         .pipe(sourcemaps.write(mapPath))
         .pipe(gulp.dest(outPath));
