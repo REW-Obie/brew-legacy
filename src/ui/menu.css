@@ -17,7 +17,6 @@
  *     </div>
  *
  */
-
 .mnu::after {
     content: " ";
     display: block;
