@@ -23,7 +23,8 @@
  *
  */
 
- .timeline {
+.timeline {
+    --zIndex-adjacent: var(--zIndex-2);
     position: relative;
 }
 
@@ -34,7 +35,13 @@
     bottom: 10px;
     left: 0;
     right: 0;
+    z-index: calc(var(--zIndex-adjacent) - 1);
     background: url(https://s3-us-west-2.amazonaws.com/rewhq/brew/timeline.gif) 88px center repeat-y;
+}
+
+.timeline .bd {
+    position: relative;
+    z-index: var(--zIndex-adjacent);
 }
 
 .event {
