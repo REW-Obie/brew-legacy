@@ -22,6 +22,21 @@
  *     </div>
  *
  */
+
+ .timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background: url(https://s3-us-west-2.amazonaws.com/rewhq/brew/timeline.gif) 88px center repeat-y;
+}
+
 .event {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -49,7 +64,8 @@
     display: block;
     width: 9px;
     height: 9px;
-    border: 2px solid #999;
+    border: 2px solid #ddd;
+    background: #ddd;
     border-radius: 50%;
     position: absolute;
     right: 20px;
